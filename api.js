@@ -32,7 +32,8 @@ class ApiClient {
 
         try {
             const response = await fetch(url, config);
-            const data = await response.json();
+	    const data = await response.json();
+
 
             if (!response.ok) {
                 throw new Error(data.error || `HTTP ${response.status}: ${response.statusText}`);
